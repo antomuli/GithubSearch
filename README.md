@@ -42,6 +42,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 ***BDD***
+
+| Behaviour | Input | Output |
+| --------- | ------| ------ |
+|Show github profile|Enter the Username in the search box and cick `search`|Displays name, username, bio, number of repositories, Hireable, date of creating the repo, followers, following and public gists|
+|Load more search Results   |Click `Load More` button on the Find Repos page |Adds 10 more results in the search results|
+|Redirect to github profile on Github website | Click the `view on github` button of a Github user | Opens the profile on the Github website|
+|Redirect to a specific Github Repository | Click the `view on github` button of a repository on repositories page | Opens the Repository on Github website |
 ## project screenshot
 
 
@@ -67,11 +74,13 @@ This site was built using github pages:
 
 4.JQuery.
 
+5.Github Api's
+
 
 
 ***Known Bugs***
 
-1.The page is 5% unresponsive.
+1.The page is 25% unresponsive.
 
 2.The app has a limit of the number of github users you can search. eg max.=30
 
@@ -87,6 +96,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Collaborate
+
+To colloborate, raech me on mulianthony561@gmail.com
 
 
 ###### LICENSE AND COPY RIGHT INFO.
