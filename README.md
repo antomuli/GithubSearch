@@ -45,7 +45,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 | Behaviour | Input | Output |
 | --------- | ------| ------ |
-|Show github profile|Enter the Username in the search box and cick `search`|Displays name, username, bio, number of repositories, Hireable, date of creating the repo, followers, following and public gists|
+|Show github profile|Enter the Username in the search box and press  `enter`|Displays name, username, bio, number of repositories, Hireable, date of creating the repo, followers, following and public gists|
 |Load more search Results   |Click `Load More` button on the Find Repos page |Adds 10 more results in the search results|
 |Redirect to github profile on Github website | Click the `view on github` button of a Github user | Opens the profile on the Github website|
 |Redirect to a specific Github Repository | Click the `view on github` button of a repository on repositories page | Opens the Repository on Github website |
@@ -55,7 +55,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
  
 
 ##### Live Link to GithubSearch.
-The following is the live link to the project "GithubSearch":
+The following is the live link to the project "GithubSearch":https://antomuli.github.io/GithubSearch/
 This site was built using github pages:
  
 ##### CODEBEAT
