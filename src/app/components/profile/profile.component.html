@@ -24,13 +24,13 @@
       <p><strong>Name:</strong> {{profile.name}}</p>
       <p><strong>Bio:</strong> {{profile.bio}}</p>
       <p><strong>Username:</strong> {{profile.login}}</p>
-      <p><strong>Works at</strong> {{profile.company}}</p>
+      <p><strong>Works at;</strong> {{profile.company}}</p>
       <p><strong>Location:</strong> {{profile.location}}</p>
       <p><strong>Email:</strong>{{profile.email}}</p>
-      <p><strong>Joined in:</strong>{{profile.created_at | date}}</p>
+      <p><strong></strong>{{profile.created_at | date}}</p>
 
-      <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
-          account!</a></p>
+      <h1><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
+          account!</a></h1>
     </div>
   </div>
   <div class="text-center">
@@ -38,10 +38,10 @@
   <div class="row">
   <div class="card col-4 repo" *ngFor="let repo of repos">
     <div class="card-body" >
-      <p>{{repo.name}}</p>
+      <h5>{{repo.name}}</h5>
       <p>{{repo.description}}</p>
-      <p> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
-          this project on github..</a></p>
+      <h1> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
+          this project on github..</a></h1>
     </div>
   </div>
 </div>

@@ -2,5 +2,20 @@
   padding-top: 60px;
 }
 .repo{
-  border: 1px solid rgb(59, 137, 182);
+  border: 1px solid rgb(143, 174, 192);
+}
+h3{
+  font-weight: 800;
+  color: black;
+}
+h3:hover{
+  background-color: brown;
+}
+p:hover{
+  color:white;
+  background-color: darkgrey;
+}
+h5{
+  text-shadow: 2px 2px #aaaa;
+  font-size: 29px;
 }
