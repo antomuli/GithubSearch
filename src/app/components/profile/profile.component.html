@@ -1,59 +1,49 @@
-<form action="">
+<form action="" class="searchform">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search git users with username">
+    <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username"(keyup)="findProfile()">
   </div>
 </form>
 <div *ngIf="profile">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{profile.name}} <small>({{profile.login}})</small>
-      <span *ngIf="profile.company">, works at {{profile.company}}</span>
-      {{profile.location}}
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+        <img src="{{profile.avatar_url }}" class="img-circle img-responsive" alt="profile Image">
     </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-sm-3">
-          <img src="{{profile.avatar_url }}" class="img-circle img-responsive" alt="profile Image">
+    
+    <div class="col-md-6 col-sm-6">
+        <div class="col-md-8">
+        
+            <span class="badge badge-primary mr-2">
+                {{ profile.public_repos }} Public Repos</span>
+            <span class="badge badge-secondary mr-2">{{ profile.public_gists }} Gists</span>
+            <span class="badge badge-success mr-2">
+                {{ profile.followers }} Followers</span>
+            <span class="badge badge-danger mr-2">
+                {{ profile.following }} Following</span>
         </div>
-        <div class="col-sm-5">
-          <ul class="list-group">
-            <li class="li-group-item" *ngIf="profile.bio">
-              {{profile.bio}}
-            </li>
-            <li class="li-group-item" *ngIf="profile.hireable">Available for hire
-              {{profile.bio}}
-            </li>
-            <li class="li-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">
-                {{profile.blog}}</a>
-            </li>
-            <li class="li-group-item" *ngIf="profile.email"><a href=" {{profile.email}}">
-                {{profile.email}}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-          <div>
-            <p>
-              <span class="label label-default">{{profile.followers}} Followers</span>
-              <span class="label label-primary">Following {{profile.following}} </span>
-              <span class="label label-success">{{profile.public_gists}} Public gists</span>
-              <span class="label label-info">{{profile.public_repos}} Public Repos</span>
-            </p>
-            <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
-                account!</a></p>
-            <div class="panel-heading">
-              <h3 class="panel-title">Repos</h3>
-            </div>
-            <div class="panel-body" *ngFor="let repo of repos">
-              <p class="clearfix">
-                {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
-                  this project on github..</a>
-              </p>
-              <p>{{repo.description}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>Name: {{profile.name}}</p>
+      <p>Bio: {{profile.bio}}</p>
+      <p>Username: {{profile.login}}</p>
+      <p>Works at {{profile.company}}</p>
+      <p>Location: {{profile.location}}</p>
+      <p>Email:{{profile.email}}</p>
+      <p>Joined in:{{profile.created_at | date}}</p>
+
+      <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
+          account!</a></p>
+    </div>
+  </div>
+  <div class="text-center">
+  <h3 class="panel-title">Repos</h3>
+  <div class="row">
+  <div class="card col-4 repo" *ngFor="let repo of repos">
+    <div class="card-body" >
+      <p>{{repo.name}}</p>
+      <p>{{repo.description}}</p>
+      <p> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
+          this project on github..</a></p>
     </div>
   </div>
 </div>
+</div>
+</div>
+
