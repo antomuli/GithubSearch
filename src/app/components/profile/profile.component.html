@@ -18,15 +18,16 @@
             <span class="badge badge-success mr-2">
                 {{ profile.followers }} Followers</span>
             <span class="badge badge-danger mr-2">
+
                 {{ profile.following }} Following</span>
         </div>
-      <p>Name: {{profile.name}}</p>
-      <p>Bio: {{profile.bio}}</p>
-      <p>Username: {{profile.login}}</p>
-      <p>Works at {{profile.company}}</p>
-      <p>Location: {{profile.location}}</p>
-      <p>Email:{{profile.email}}</p>
-      <p>Joined in:{{profile.created_at | date}}</p>
+      <p><strong>Name:</strong> {{profile.name}}</p>
+      <p><strong>Bio:</strong> {{profile.bio}}</p>
+      <p><strong>Username:</strong> {{profile.login}}</p>
+      <p><strong>Works at</strong> {{profile.company}}</p>
+      <p><strong>Location:</strong> {{profile.location}}</p>
+      <p><strong>Email:</strong>{{profile.email}}</p>
+      <p><strong>Joined in:</strong>{{profile.created_at | date}}</p>
 
       <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
           account!</a></p>
