@@ -1,50 +1,53 @@
 <form action="" class="searchform">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username"(keyup)="findProfile()">
+    <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username"
+      name="username" (keyup)="findProfile()">
   </div>
 </form>
 <div *ngIf="profile">
   <div class="row">
     <div class="col-md-6 col-sm-6">
-        <img src="{{profile.avatar_url }}" class="img-circle img-responsive" alt="profile Image">
+      <img src="{{profile.avatar_url }}" class="img-circle img-responsive" alt="profile Image">
     </div>
-    
-    <div class="col-md-6 col-sm-6">
-        <div class="col-md-8">
-        
-            <span class="badge badge-primary mr-2">
-                {{ profile.public_repos }} Public Repos</span>
-            <span class="badge badge-secondary mr-2">{{ profile.public_gists }} Gists</span>
-            <span class="badge badge-success mr-2">
-                {{ profile.followers }} Followers</span>
-            <span class="badge badge-danger mr-2">
 
-                {{ profile.following }} Following</span>
-        </div>
-      <p><strong>Name:</strong> {{profile.name}}</p>
-      <p><strong>Bio:</strong> {{profile.bio}}</p>
-      <p><strong>Username:</strong> {{profile.login}}</p>
-      <p><strong>Works at;</strong> {{profile.company}}</p>
-      <p><strong>Location:</strong> {{profile.location}}</p>
-      <p><strong>Email:</strong>{{profile.email}}</p>
-      <p><strong></strong>{{profile.created_at | date}}</p>
+    <div class="col-md-6 col-sm-6">
+      <div class="col-md-8">
+
+        <span class="badge badge-primary mr-2">
+          {{ profile.public_repos }} Public Repos</span>
+        <span class="badge badge-secondary mr-2">{{ profile.public_gists }} Gists</span>
+        <span class="badge badge-success mr-2">
+          {{ profile.followers }} Followers</span>
+        <span class="badge badge-danger mr-2">
+
+          {{ profile.following }} Following</span>
+      </div>
+      <div class="bio-data">
+        <p><strong>Name:</strong> {{profile.name}}</p>
+        <p><strong>Bio:</strong> {{profile.bio}}</p>
+        <p><strong>Username:</strong> {{profile.login}}</p>
+        <p><strong>Works at;</strong> {{profile.company}}</p>
+        <p><strong>Location:</strong> {{profile.location}}</p>
+        <p><strong>Email:</strong>{{profile.email}}</p>
+        <p><strong></strong>{{profile.created_at | date}}</p>
+      </div>
+
 
       <h1><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github
           account!</a></h1>
     </div>
   </div>
   <div class="text-center">
-  <h3 class="panel-title">Repos</h3>
-  <div class="row">
-  <div class="card col-4 repo" *ngFor="let repo of repos">
-    <div class="card-body" >
-      <h5>{{repo.name}}</h5>
-      <p>{{repo.description}}</p>
-      <h1> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
-          this project on github..</a></h1>
+    <h3 class="panel-title">Repos</h3>
+    <div class="row">
+      <div class="card col-4 repo" *ngFor="let repo of repos">
+        <div class="card-body">
+          <h5>{{repo.name}}</h5>
+          <p>{{repo.description}}</p>
+          <h1> <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View
+              this project on github..</a></h1>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-</div>
-
