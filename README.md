@@ -60,7 +60,7 @@ This site was built using github pages:
  
 ##### CODEBEAT
 
-
+[![codebeat badge](https://codebeat.co/badges/c937679a-8485-44cb-bd2f-4a0ac63044e6)](https://codebeat.co/projects/github-com-antomuli-githubsearch-master)
 
 
 **The following include the list of technologies used:**
