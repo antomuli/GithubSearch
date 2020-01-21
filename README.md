@@ -49,9 +49,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 |Load more search Results   |Click `Load More` button on the Find Repos page |Adds 10 more results in the search results|
 |Redirect to github profile on Github website | Click the `view on github` button of a Github user | Opens the profile on the Github website|
 |Redirect to a specific Github Repository | Click the `view on github` button of a repository on repositories page | Opens the Repository on Github website |
-## project screenshot
-
-![Search git-user] (`./assets/Search git-user.jpg`)
 
 ##### Live Link to GithubSearch.
 The following is the live link to the project "GithubSearch":https://antomuli.github.io/GithubSearch/
